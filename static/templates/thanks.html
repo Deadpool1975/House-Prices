@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}     
+    <div class="container">
+       <h2>Thank you!</h2>
+
+       <br/><br/>
+       <p style="text-align: center">A representative will get back to you within 24 hours.</p>
+       <br/><br/>
+
+       <div align="center">
+          First Name: {{ first_name }}<br/>
+          Last Name:  {{ last_name }}<br/>
+          Realtor ID: {{ id }}<br/>
+          Message:    {{ msg }}<br/>
+       </div>
+    </div>
+{% endblock %}

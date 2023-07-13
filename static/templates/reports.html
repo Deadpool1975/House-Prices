@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}     
+   <div class='container'>
+      <h2>Real Estate Transactions</h2>
+      <h3>{{ zip_code }}</h3>
+      <br/><br/>
+
+      {% if myData.empty %}
+         <h4>No matching entries found!</h4>
+         <br/><br/>
+         <a class="nav-link" aria-current="page" href="{{ url_for('index') }}">Home</a>
+
+      {% else %}
+         <table width="600">
+         <thead>
+            <tr>
+               {% for column in myData.columns %}
+                  <th>{{column}}</th>
+               {% endfor -%}
+            </tr>
+         </thead>
+         <tbody>
+            {% for key,value in myData.iterrows() %}
+               <tr id="row-{{key}}">
+                  {% for v in value.values %}
+                     <td>{{ v }}</td>
+                  {% endfor %}
+               </tr>
+            {% endfor %}
+         </tbody>
+         </table>
+      {% endif %}
+   </div>
+{% endblock %}

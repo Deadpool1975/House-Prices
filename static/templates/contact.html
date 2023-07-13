@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}     
+    <div class='container'>
+       <h2>Contact Us</h2>
+
+       <br/><br/>
+       <form action="/thanks" method="POST" class="form-contact">
+         <div class="form-group">
+            <input type="text" class="form-control shadow-sm sm-white rounded" id="exampleFormControlInput1" 
+            placeholder="First Name", name="first_name">
+          </div>
+          <br/>
+          <div class="form-group">
+            <input type="text" class="form-control  shadow-sm sm-white rounded" id="exampleFormControlInput1" 
+            placeholder="Last Name", name="last_name">
+          </div>
+          <br/>
+          <div class="form-group">
+            <input type="text" class="form-control  shadow-sm sm-white rounded" id="exampleFormControlInput1" 
+            placeholder="Realtor ID", name="id">
+          </div>
+          <br/>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" name="
+            msg" rows="3"></textarea>        
+          </div>  
+          <br/><br/>
+          <button type="submit" class="btn btn-primary">Send</button>
+      </form>       
+    </div>
+{% endblock %}

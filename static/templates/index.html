@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}     
+    <div class="container">
+       <h2>Right-On Home Page</h2>
+
+       <br/><br/>
+       Realtors, enter a valid Sacramento Zip Code in the box below
+       and press the Search button. Sacramento Home Sales for the
+       selected area will display on the Reports page.
+
+       <br/><br/>
+       <form action='/reports' method='POST' class="form-zip">
+            <div class="form-group">
+                <input type="text" maxlength="5" class="form-control shadow-sm sm-white rounded" id="exampleFormControlInput1" 
+                placeholder="Zip", name="zip_code">  
+            </div>
+            <br/><br/>
+            <button type="submit" class="btn btn-secondary">Search</button>            
+       </form>
+    </div>
+{% endblock %}
